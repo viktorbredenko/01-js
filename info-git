@@ -3,3 +3,4 @@ git status
 git add filename
 git commit -m "якийсь комент"
 git push
+git pull \\для оновлення
