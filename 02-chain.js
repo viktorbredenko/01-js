@@ -39,15 +39,15 @@ const Test2 = function () {
     let total = 0;
 
 
-    add(value) {
+    function add(value) {
         total += value;
         return this
     }
-    sub(value) {
+    function sub(value) {
         total -= value;
         return this
     }
-    print() {
+    function print() {
         console.log(total)
         return this
     }
