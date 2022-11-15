@@ -28,9 +28,9 @@ class Test {
 
 const obj = new Test(15);
 
-obj.add(8).sub(1).print();
+//obj.add(8).sub(1).print();
 
-console.log(obj)
+//console.log(obj)
 
 
 const Test2 = function () {
@@ -41,15 +41,23 @@ const Test2 = function () {
 
     function add(value) {
         total += value;
-        return this
+        return total;
     }
     function sub(value) {
         total -= value;
-        return this
+        return total;
     }
     function print() {
         console.log(total)
-        return this
+        return total;
     }
 
+    return (add, sub, print)
 }
+
+const obj2 = new Test2();
+
+obj2.
+
+    //obj2.add(8)
+    console.log(new Test2())
