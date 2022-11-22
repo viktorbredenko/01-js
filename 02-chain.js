@@ -28,36 +28,34 @@ class Test {
 
 const obj = new Test(15);
 
-//obj.add(8).sub(1).print();
+obj.add(8).sub(1).print();
 
 //console.log(obj)
 
 
 const Test2 = function () {
 
-
     let total = 0;
-
 
     function add(value) {
         total += value;
-        return total;
+        return this;
     }
     function sub(value) {
         total -= value;
-        return total;
+        return this;
     }
     function print() {
         console.log(total)
-        return total;
+        return this;
     }
 
-    return (add, sub, print)
+    return { add, sub, print }
 }
 
 const obj2 = new Test2();
 
-obj2.
+//obj2.print()
 
-    //obj2.add(8)
-    console.log(new Test2())
+//obj2.add(8)
+//console.log(obj2)
