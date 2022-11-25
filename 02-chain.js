@@ -6,31 +6,31 @@
 // let arr = [4,6,2].map((e,i)=>e++)
 // console.log(arr)
 
-class Test {
-    constructor(sum) {
-        this.total = sum;
+// class Test {
+//     constructor(sum) {
+//         this.total = sum;
 
-    }
-    add(value) {
-        this.total += value;
-        return this
-    }
-    sub(value) {
-        this.total -= value;
-        return this
-    }
-    print() {
-        console.log(this)
-        return this
-    }
+//     }
+//     add(value) {
+//         this.total += value;
+//         return this
+//     }
+//     sub(value) {
+//         this.total -= value;
+//         return this
+//     }
+//     print() {
+//         console.log(this)
+//         return this
+//     }
 
-}
+// }
 
-const obj = new Test(15);
+// const obj = new Test(15);
 
-obj.add(8).sub(1).print();
+// obj.add(8).sub(1).print();
 
-//console.log(obj)
+// //console.log(obj)
 
 
 const Test2 = function () {
@@ -55,7 +55,7 @@ const Test2 = function () {
 
 const obj2 = new Test2();
 
-//obj2.print()
+obj2.print()
 
-//obj2.add(8)
-//console.log(obj2)
+obj2.add(8)
+console.log(obj2)
