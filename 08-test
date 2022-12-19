@@ -1,85 +1,34 @@
+const arr = [3, 5, 1, 3,]
 
 
-
-let arr = [1,2,3];
-arr[10] = 10;
-
-Array.prototype.forEach2 = function (callback){
-    
-    if(this == null){
-        throw new Error("Arrey_undef");
-    }
-    if(typeof callback !== 'function'){
-        throw new Error('Callback is not a function')
-    }
-
-    let obj = Object(this);
-    let len = obj.length;
- 
-    let i = 0;
-    
-    while (i < len){
-        
-        if (i in obj){
-            callback(this[i],i)
-        }
-
-        i++;
-    }
-
+function add(a) {
+    return a * 5;
 }
-arr.forEach2((item, index) => {
-      console.log({item, index});
-    
-})
-//-------------------------------------
-// let nams = [1,8,2,4,7]
-// let sum = nums.reduce(x, y) => x+y
 
-// function add(...arg){
-    
-//     return [...arg].reduce((a, b) => a+b)
-    
-// }
-// console.log(add(3,5,8))
+Array.prototype.cb = function (callback) {
+    for (let i = 0; i < this.length; i++) {
+        callback(this[i])
 
-// function sum(...arg){
-//     let result = 0;
-//     let elements = [...arg];
-//     for(let i = elements.length -1; i >= 0; i --){
-//         result +=elements[i];
-//     }
-//     return result;
-// }
-// console.log(sum(3,5,8))
-//
-// Array.prototype.test =  function (callback){
-//     callback(this);
+    }
+}
+arr.cb((r) => console.log(r))
+//console.log('Можно разбить любой текст\n на многие\n строчки.')
+//-----------------------------
+// let x = 10;
 
+// function bar(funArg) {
+//     let x = 30;
+//     funArg()
 // }
 
-// arr.test((r)=> console.log(r))
-//--------------------------------------
-
-// let arr = [1,2,3];
-// arr[10] = 10;
-
-// Array.prototype.forEach2 = function (callback){
-    
-//     if(this == null){
-//         throw new Error("Arrey_undef");
-//     }
-//     if(typeof callback !== 'function'){
-//         throw new Error('Callback is not a function')
-
-//     }
-//     for(let i = 0; i< arr.length; i++){
-//         callback(this[i], i)
-//     }
+// function foo() {
+//     console.log(x);
 // }
-// arr.forEach2((item, index) => {
-//       console.log({item, index});
-    
-// })
+
+// bar(foo)
+// console.log(foo)
+
+
+
 
 
