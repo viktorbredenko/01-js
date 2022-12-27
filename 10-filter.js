@@ -40,8 +40,9 @@ Array.prototype.filter2 = function (callback, thisArg) {
     for (let i = 1; i < len; i++) {
 
         if (i in o) {
-            callback(this[i])
-            res.push(this[i]);
+            if (callback.call(this[i], i, o)) {
+                res.push(this[i]);
+            }
         }
     }
 
@@ -50,7 +51,7 @@ Array.prototype.filter2 = function (callback, thisArg) {
     return res;
 }
 
-let prime = arrey.filter2(isPrime)
+let prime = arrey.filter2((i) => i == 3)
 
 console.log(prime)
 
