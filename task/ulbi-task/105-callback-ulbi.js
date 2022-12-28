@@ -6,9 +6,9 @@ const groupBy = (arr, callbackFunction) => {
 
     arr.forEach(item => {
         let resCallback = callbackFunction(item)
-        console.log(result[resCallback])
+        //console.log(result[resCallback])
 
-        result[resCallback]
+        result[resCallback] //?
             ? result[resCallback].push(item)
             : result[resCallback] = [item]
     });
