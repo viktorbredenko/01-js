@@ -1,5 +1,8 @@
-let a = 5
-let b = 4
-console.log(a + b)
+const o = {
+    
+        1 : "werwrwer",
+        "1" : "trst",
 
-Object
+}
+
+console.log(o)

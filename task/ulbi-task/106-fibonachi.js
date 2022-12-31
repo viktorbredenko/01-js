@@ -6,10 +6,12 @@ function fibonSort(num) {
     let b = 1;
     for (let i = 3; i <= num; i++) {
         [a, b] = [b, a + b];
+        a
+        b
     }
     return b;
 }
-console.log(fibonSort(7))
+console.log(fibonSort(5))
 
 //------------------------------------------------
 // function iterationFibonachi(n) {
